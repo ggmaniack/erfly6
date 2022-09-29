@@ -346,13 +346,13 @@ uint8_t PINB(void) {
 
   SETBIT(pinb, INP_B_KEY_MEN, READBIT(in, FS_OK));
   SETBIT(pinb, INP_B_KEY_EXT, READBIT(in, FS_CANCEL));
-  if (BIND_GetVal() == 0) {
-    SETBIT(pinb, INP_B_KEY_RGT, READBIT(in, FS_UP));
-    SETBIT(pinb, INP_B_KEY_LFT, READBIT(in, FS_DOWN));
-  } else {
+  //if (BIND_GetVal() == 0) {
+    SETBIT(pinb, INP_B_KEY_RGT, /*READBIT(in, FS_UP)*/BIND_GetVal());
+    //SETBIT(pinb, INP_B_KEY_LFT, READBIT(in, FS_DOWN));
+  //} else {
     SETBIT(pinb, INP_B_KEY_UP, READBIT(in, FS_UP));
     SETBIT(pinb, INP_B_KEY_DWN, READBIT(in, FS_DOWN));
-  }
+  //}
   return pinb;
 }
 
