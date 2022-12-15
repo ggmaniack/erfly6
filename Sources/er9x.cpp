@@ -2661,10 +2661,10 @@ void popMenu(bool uppermost)
     if(g_menuStackPtr>0 || uppermost)
     {
 
-        if(g_menuStack[g_menuStackPtr] ==  menuProcProtocol)
-        {
-          resetElrsMenuVariables();
-        }
+        //if(g_menuStack[g_menuStackPtr] ==  menuProcProtocol)
+        //{
+        //  resetElrsMenuVariables();
+        //}
         g_menuStackPtr = uppermost ? 0 : g_menuStackPtr-1;
 				EnterMenu = EVT_ENTRY_UP ;
     }
@@ -2673,7 +2673,7 @@ void popMenu(bool uppermost)
 //    }
 }
 
-void chainMenu(MenuFuncP newMenu)
+void chainMenu(MenuFuncP newMenu)  
 {
     g_menuStack[g_menuStackPtr] = newMenu;
 		EnterMenu = EVT_ENTRY ;

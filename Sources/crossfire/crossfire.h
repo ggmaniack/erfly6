@@ -33,8 +33,8 @@
 
 
 #define  PCBI6 1
-#define deviceId 0xEE
-#define handsetId 0xEF
+//#define deviceId 0xEE
+//#define handsetId 0xEF
 
 #define  TRACE(...) while(0){}
 #define DIM(arr) (sizeof((arr))/sizeof((arr)[0]))
